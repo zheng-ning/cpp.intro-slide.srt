@@ -1,0 +1,10 @@
+rename 's/\(1\).srt/.en.srt/' *.srt
+//rename all parethesis in file name
+
+//remove all (1)s
+rename 's/\(1\).srt/fr.srt/' *\).srt
+//better version
+rename 's/\ \(1\).srt/.fr.srt/' *\).srt
+
+//remove blank space prifx .fr
+rename 's/\ fr/.fr/' *fr.srt

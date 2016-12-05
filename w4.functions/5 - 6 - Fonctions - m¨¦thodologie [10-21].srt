@@ -1,0 +1,794 @@
+1
+00:00:05,300 --> 00:00:09,753
+Je voudrais dans cette séquence vidéo
+résumer la méthodologie générale
+
+2
+00:00:09,753 --> 00:00:14,093
+que je vous conseille de suivre pour
+concevoir, décrire une fonction.
+
+3
+00:00:14,093 --> 00:00:16,228
+Donc, tout d'abord je vous demande de,
+
+4
+00:00:16,228 --> 00:00:19,041
+clairement, identifier ce que la fonction
+doit faire.
+
+5
+00:00:19,041 --> 00:00:20,833
+C'est vraiment le point important.
+
+6
+00:00:20,833 --> 00:00:23,886
+Il faut commencer par identifier ce que la
+fonction doit faire.
+
+7
+00:00:23,886 --> 00:00:26,406
+Ça ne sert à rien d'essayer d'écrire une
+fonction si
+
+8
+00:00:26,406 --> 00:00:29,140
+vous ne savez pas clairement ce que vous
+voulez faire.
+
+9
+00:00:29,140 --> 00:00:30,440
+Donc, c'est vraiment
+
+10
+00:00:30,440 --> 00:00:33,170
+ici un point conceptuel, il n'y a aucune
+ligne de
+
+11
+00:00:33,170 --> 00:00:35,084
+C++ à écrire ici mais il y a vraiment à
+
+12
+00:00:35,084 --> 00:00:38,551
+concevoir, éventuellement en vous aidant
+d'un papier, d'un crayon, en
+
+13
+00:00:38,551 --> 00:00:42,610
+faisant des schémas, à concevoir ce que la
+fonction doit faire.
+
+14
+00:00:42,610 --> 00:00:45,524
+On s'intéresse ici vraiment à ce que fait
+la fonction.
+
+15
+00:00:45,524 --> 00:00:48,686
+On s'intéresse au quoi et on ne
+s'intéresse absolument pas
+
+16
+00:00:48,686 --> 00:00:52,300
+pour l'instant à comment faire, ce que la
+fonction doit faire.
+
+17
+00:00:52,300 --> 00:00:55,512
+Et c'est là où il faut bien faire
+attention de ne pas faire ce
+
+18
+00:00:55,512 --> 00:00:57,716
+que l'on a appelé précédemment dans la
+vidéo
+
+19
+00:00:57,716 --> 00:01:01,030
+sur les prototypes, des effets de bord,
+c'est-à-dire
+
+20
+00:01:01,030 --> 00:01:03,970
+que la fonction doit faire exactement ce
+pourquoi
+
+21
+00:01:03,970 --> 00:01:06,205
+elle a été prévue, ni plus ni moins.
+
+22
+00:01:06,205 --> 00:01:09,549
+Si par exemple vous avez conçu une
+fonction sqrt dont
+
+23
+00:01:09,549 --> 00:01:12,817
+le but est de calculer la racine carrée
+d'un double
+
+24
+00:01:12,817 --> 00:01:17,568
+par exemple ici x et dont l'appel
+correspondrait par exemple
+
+25
+00:01:17,568 --> 00:01:20,711
+comme ça à z égal sqrt de x, la fonction
+ici
+
+26
+00:01:20,711 --> 00:01:24,401
+sqrt doit simplement calculer la racine
+carrée de x et
+
+27
+00:01:24,401 --> 00:01:28,006
+la retourner à z, elle ne doit pas polluer
+l'affichage
+
+28
+00:01:28,006 --> 00:01:31,893
+sur le terminal avec des valeurs
+affichées, elle doit juste
+
+29
+00:01:31,893 --> 00:01:36,550
+calculer, sans afficher, la valeur de la
+racine carrée de x.
+
+30
+00:01:36,550 --> 00:01:39,338
+Ensuite, quand vous avez fait ceci, vous
+devez
+
+31
+00:01:39,338 --> 00:01:42,738
+vous demander qu'est-ce que la fonction
+doit recevoir.
+
+32
+00:01:42,738 --> 00:01:45,870
+Quels sont les arguments que la fonction
+doit recevoir?
+
+33
+00:01:45,870 --> 00:01:48,030
+Si par exemple, je reprends l'exemple de
+
+34
+00:01:48,030 --> 00:01:50,830
+notre fonction moyenne, donc très
+clairement au début
+
+35
+00:01:50,830 --> 00:01:52,860
+j'ai pensé que c'était une fonction qui
+
+36
+00:01:52,860 --> 00:01:55,610
+devait calculer la moyenne de deux nombres
+réels.
+
+37
+00:01:55,610 --> 00:01:57,780
+Elle en prendra deux nombres réels et
+
+38
+00:01:57,780 --> 00:02:00,189
+elle calculera la moyenne de deux nombres
+réels.
+
+39
+00:02:00,189 --> 00:02:04,848
+Donc ici à ce stade-là, je me dis qu'elle
+va recevoir deux arguments de type double,
+
+40
+00:02:04,848 --> 00:02:11,290
+par exemple, je peux les appeler x et y.
+Ensuite, vous allez vous demander
+
+41
+00:02:11,290 --> 00:02:15,394
+si vous devez passer vos arguments par
+valeur ou par référence.
+
+42
+00:02:15,394 --> 00:02:18,698
+Je vous rappelle brièvement qu'il existe
+deux types de passage.
+
+43
+00:02:18,698 --> 00:02:20,763
+Le passage par valeur qui fait une copie
+et
+
+44
+00:02:20,763 --> 00:02:23,462
+ne permet donc pas à la fonction de
+modifier les
+
+45
+00:02:23,462 --> 00:02:28,179
+arguments reçus, et le passage par
+référence qui sera utilisé
+
+46
+00:02:28,179 --> 00:02:33,314
+lorsqu'on veut modifier les arguments
+reçus, passés à la fonction.
+
+47
+00:02:33,314 --> 00:02:36,295
+Donc si je prends l'exemple ici d'un
+
+48
+00:02:36,295 --> 00:02:43,758
+appel à la fonction moyenne où on
+passerait ici deux, aguments a et b.
+
+49
+00:02:43,758 --> 00:02:47,839
+La question, est-ce que moyenne va
+modifier a ou modifier b?
+
+50
+00:02:47,839 --> 00:02:55,060
+La réponse ici est clairement non et donc
+ici on va faire un passage par valeur.
+
+51
+00:02:55,060 --> 00:02:58,791
+Si par contre vous pensez que votre
+fonction doit
+
+52
+00:02:58,791 --> 00:03:01,844
+modifier les arguments qu'elle a reçus,
+alors à ce moment-là,
+
+53
+00:03:01,844 --> 00:03:03,716
+il faudra faire un passage par référence
+comme
+
+54
+00:03:03,716 --> 00:03:06,159
+on a vu dans la vidéo concernant l'appel.
+
+55
+00:03:06,159 --> 00:03:10,023
+Ensuite, vous pouvez de façon optionnelle,
+vous demander si ça a
+
+56
+00:03:10,023 --> 00:03:13,846
+un sens de donner une valeur par défaut au
+paramètre correspondant.
+
+57
+00:03:13,846 --> 00:03:16,598
+Ceci sera traité dans une autre vidéo plus
+tard mais
+
+58
+00:03:16,598 --> 00:03:20,737
+c'est à cet endroit- là que vous vous
+poseriez la question.
+
+59
+00:03:20,737 --> 00:03:24,038
+Quatrième étape, vous demandez de quel
+type doit
+
+60
+00:03:24,038 --> 00:03:26,958
+être la valeur que la fonction doit
+retourner au
+
+61
+00:03:26,958 --> 00:03:28,272
+reste du programme.
+
+62
+00:03:28,272 --> 00:03:31,745
+Donc pour ça, vous écrivez le code, comme
+ça dans votre
+
+63
+00:03:31,745 --> 00:03:36,170
+tête, z égal appel de votre fonction avec
+les différents arguments.
+
+64
+00:03:36,170 --> 00:03:40,112
+Est-ce que ça a un sens d'écrire z égal un
+appel de la fonction?
+
+65
+00:03:40,112 --> 00:03:45,155
+Donc, par exemple, est-ce que ça a un sens
+d'écrire z égal la moyenne de a et b.
+
+66
+00:03:45,155 --> 00:03:48,575
+Dans notre cas évidemment ça a un sens et
+le sens c'est
+
+67
+00:03:48,575 --> 00:03:51,860
+que z, à ce moment-là, sera la moyenne de
+a et b.
+
+68
+00:03:51,860 --> 00:03:55,010
+Donc si ça a un sens, le type de retour
+doit
+
+69
+00:03:55,010 --> 00:03:59,255
+être le type de z pour lequel cette
+expression a un sens.
+
+70
+00:03:59,255 --> 00:04:02,895
+Donc ici ce sera typiquement un double et
+donc ça
+
+71
+00:04:02,895 --> 00:04:07,870
+veut dire que la fonction moyenne doit
+retourner un double.
+
+72
+00:04:07,870 --> 00:04:12,792
+Si une telle expression n'a pas de sens,
+si ça n'a
+
+73
+00:04:12,792 --> 00:04:16,900
+absolument pas de sens d'écrire z égal à
+appel de fonction par
+
+74
+00:04:16,900 --> 00:04:19,947
+exemple, est-ce que ça aurait un sens
+d'écrire
+
+75
+00:04:19,947 --> 00:04:21,879
+z égal affiche, on avait vu tout à
+
+76
+00:04:21,879 --> 00:04:24,708
+l'heure, afficher racine, est-ce que ça a
+un
+
+77
+00:04:24,708 --> 00:04:27,425
+sens d'écrire z égal à affiche racine de
+deux?
+
+78
+00:04:27,425 --> 00:04:31,379
+Attention, ici c'était bien afficher, ce
+n'était pas calculer la racine de deux.
+
+79
+00:04:31,379 --> 00:04:32,891
+Qu'est-ce que serait z dans ce cas-là?
+
+80
+00:04:32,891 --> 00:04:36,088
+Moi, je ne vois pas très bien à quoi ça
+pourrait faire référence.
+
+81
+00:04:36,088 --> 00:04:39,012
+Afficher affiche et puis c'est tout, on
+n'a rien
+
+82
+00:04:39,012 --> 00:04:42,435
+à retourner ici donc cette expression à
+mon avis n'aurait
+
+83
+00:04:42,435 --> 00:04:46,410
+pas de sens et dans ce cas-là, le type de
+retour est à ce moment-là
+
+84
+00:04:46,410 --> 00:04:51,520
+une, on appelle ça une procédure, donc le
+type de retour est à ce moment-là void.
+
+85
+00:04:51,520 --> 00:04:53,860
+Cinquième et dernière étape enfin.
+
+86
+00:04:53,860 --> 00:04:58,540
+Maintenant et seulement maintenant, pas
+avant, vous vous préoccupez du comment.
+
+87
+00:04:58,540 --> 00:05:00,750
+Comment écrire le corps de la fonction?
+
+88
+00:05:00,750 --> 00:05:04,088
+Comment la fonction va faire ce qu'elle a
+à faire?
+
+89
+00:05:04,088 --> 00:05:07,720
+Au préalable on s'était uniquement
+préoccupé du quoi
+
+90
+00:05:07,720 --> 00:05:11,548
+et c'est seulement ici tout à la fin qu'on
+se préoccupe du comment.
+
+91
+00:05:11,548 --> 00:05:14,996
+Si je vous donne l'exemple donc de la
+fonction moyenne dont
+
+92
+00:05:14,996 --> 00:05:19,708
+je sais, par les étapes précédentes
+qu'elle doit retourner un double.
+
+93
+00:05:19,708 --> 00:05:27,867
+Elle s'écrit moyenne, elle reçoit un
+argument x par valeur puisque
+
+94
+00:05:27,867 --> 00:05:32,921
+cet argument ne doit pas être modifié.
+Elle reçoit un deuxième argument y.
+
+95
+00:05:32,921 --> 00:05:38,915
+On va s'intéresser maintenant à comment
+écrire cette fonction.
+
+96
+00:05:38,915 --> 00:05:43,535
+Donc ici, je vous conseille de commencer
+par, par exemple, déclarer
+
+97
+00:05:43,535 --> 00:05:48,227
+une variable que l'on va appeler résultat,
+que l'on va
+
+98
+00:05:48,227 --> 00:05:53,155
+initialiser à une valeur qui fait cent
+disons, ici
+
+99
+00:05:53,155 --> 00:05:57,950
+zéro et tout de suite écrire un return de
+
+100
+00:05:57,950 --> 00:06:00,126
+cette, qui utilise cette variable.
+
+101
+00:06:00,126 --> 00:06:03,118
+Je vous encourage à procéder de la sorte à
+chaque fois
+
+102
+00:06:03,118 --> 00:06:06,912
+que vous avez comme ça une fonction qui
+retourne un type défini.
+
+103
+00:06:06,912 --> 00:06:11,527
+Donc par exemple ici un double, à définir
+ici tout de suite, une variable que
+
+104
+00:06:11,527 --> 00:06:14,622
+vous allez utiliser comme valeur de retour
+comme
+
+105
+00:06:14,622 --> 00:06:17,567
+ça, ça vous facilite l'écriture de ce
+corps.
+
+106
+00:06:17,567 --> 00:06:22,352
+Et ensuite donc maintenant, on va se
+demander comment on calcule ce résultat.
+
+107
+00:06:22,352 --> 00:06:23,129
+Donc ici
+
+108
+00:06:23,129 --> 00:06:28,060
+on pourrait écrire, résultat égal x plus y
+
+109
+00:06:28,060 --> 00:06:33,806
+divisé par deux.
+Supposons que l'on veuille faire
+
+110
+00:06:33,806 --> 00:06:39,812
+une fonction qui demande un nombre à
+l'utilisateur compris entre deux bornes.
+
+111
+00:06:39,812 --> 00:06:44,248
+Première étape, c'est donc de spécifier
+clairement ce que doit faire la fonction.
+
+112
+00:06:44,248 --> 00:06:48,200
+Pour cela, on peut par exemple commencer
+par faire un commentaire qui va
+
+113
+00:06:48,200 --> 00:06:53,303
+indiquer ce que fait la fonction.
+Donc ici, on va indiquer,
+
+114
+00:06:53,303 --> 00:06:58,470
+que c'est une fonction qui demande un
+nombre
+
+115
+00:06:58,470 --> 00:07:03,386
+compris entre deux bornes, par exemple, un
+
+116
+00:07:03,386 --> 00:07:08,428
+entier compris ente un et dix.
+Donc on
+
+117
+00:07:08,428 --> 00:07:13,546
+va nommer cette fonction, par exemple,
+demander nombre.
+
+118
+00:07:13,546 --> 00:07:15,769
+On suppose qu'on est donc maintenant assez
+au
+
+119
+00:07:15,769 --> 00:07:17,764
+clair avec ce que doit faire la fonction
+et
+
+120
+00:07:17,764 --> 00:07:19,588
+on va donc pouvoir passer à la deuxième
+
+121
+00:07:19,588 --> 00:07:24,790
+étape qui est d'indiquer les paramètres de
+la fonction.
+
+122
+00:07:24,790 --> 00:07:28,744
+Donc ici, comme on veut demander un nombre
+entre deux bornes, les paramètres
+
+123
+00:07:28,744 --> 00:07:30,876
+que doit recevoir la fonction pour
+travailler,
+
+124
+00:07:30,876 --> 00:07:32,735
+ce sont bien sûr les deux bornes.
+
+125
+00:07:32,735 --> 00:07:38,645
+Donc, supposons qu'on travaille sur des
+entiers ici donc les deux bornes seront un
+
+126
+00:07:38,645 --> 00:07:43,350
+entier, borne inférieure et puis un entier
+borne
+
+127
+00:07:43,350 --> 00:07:49,000
+supérieure.
+Donc on doit recevoir ici deux entiers.
+
+128
+00:07:49,000 --> 00:07:53,606
+Ensuite, il faut se demander si les deux
+paramètres que
+
+129
+00:07:53,606 --> 00:07:57,512
+l'on a passés doivent être modifiés ou non
+par la fonction.
+
+130
+00:07:57,512 --> 00:07:59,990
+Si on doit les passer par valeur ou par
+référence.
+
+131
+00:07:59,990 --> 00:08:03,776
+Il semble clair ici que la borne
+inférieure et la borne supérieure ne
+
+132
+00:08:03,776 --> 00:08:08,176
+seront pas modifiés par le fait de
+demander un nombre et donc
+
+133
+00:08:08,176 --> 00:08:12,142
+on va les passer ici, comme indiqué ici,
+les passer par valeur.
+
+134
+00:08:12,142 --> 00:08:17,517
+On peut alors passer maintenant à l'étape
+numéro quatre qui est
+
+135
+00:08:17,517 --> 00:08:22,870
+de savoir quel doit être le type de retour
+de la fonction.
+
+136
+00:08:22,870 --> 00:08:26,124
+Une bonne façon de répondre à cette
+question, c'est
+
+137
+00:08:26,124 --> 00:08:29,145
+de se poser la question, comment serait
+appelée la fonction?
+
+138
+00:08:29,145 --> 00:08:32,548
+Et là typiquement la fonction serait
+appelée avec
+
+139
+00:08:32,548 --> 00:08:34,992
+un entier i et on ferait un appel
+
+140
+00:08:34,992 --> 00:08:39,695
+comme ça, i égal demander nombre pris
+entre,
+
+141
+00:08:39,695 --> 00:08:43,880
+on avait dit par exemple, un et dix.
+
+142
+00:08:43,880 --> 00:08:49,788
+Lorsque l'on a, comme ça, des affectations
+qui peuvent récupérer la valeur de retour
+
+143
+00:08:49,788 --> 00:08:51,284
+ou ça à un sens de récupérer
+
+144
+00:08:51,284 --> 00:08:55,480
+la valeur de retour d'une fonction, alors
+naturellement,
+
+145
+00:08:55,480 --> 00:09:01,475
+le type de retour de la fonction doit être
+le type qu'aurait une variable
+
+146
+00:09:01,475 --> 00:09:05,822
+dans une telle affectation donc ici ça
+aurait un sens de décrire ce que j'ai
+
+147
+00:09:05,822 --> 00:09:09,065
+écrit, le type de i ce serait un int ce
+qui fait que donc le
+
+148
+00:09:09,065 --> 00:09:15,685
+type de retour de la fonction que nous
+avons indiqué va être un type entier.
+
+149
+00:09:15,685 --> 00:09:20,625
+On peut donc revenir ici dans notre
+programme
+
+150
+00:09:20,625 --> 00:09:26,836
+et indiquer le type de retour comme étant
+un entier.
+
+151
+00:09:26,836 --> 00:09:30,529
+Je peux donc maintenant passer à la
+dernière étape.
+
+152
+00:09:30,529 --> 00:09:34,812
+Maintenant et seulement maintenant, je me
+préoccupe d'écrire le corps de
+
+153
+00:09:34,812 --> 00:09:39,271
+la fonction.
+Donc, pour ceci, je commence par écrire le
+
+154
+00:09:39,271 --> 00:09:45,655
+corps et un petit truc ic, lorsque vous
+avez une valeur de retour à renvoyer
+
+155
+00:09:45,655 --> 00:09:49,750
+par la fonction, je vous conseille de
+directement déclarer
+
+156
+00:09:49,750 --> 00:09:52,745
+une variable qui va être utilisée pour le
+retour.
+
+157
+00:09:52,745 --> 00:09:56,723
+Le mieux, c'est aussi de l'initialiser
+directement et de
+
+158
+00:09:56,723 --> 00:10:01,184
+tout de suite indiquer que vous allez
+retourner cette valeur.
+
+159
+00:10:01,184 --> 00:10:04,940
+Et vous pouvez donc maintenant vous
+concentrer sur
+
+160
+00:10:04,940 --> 00:10:08,678
+ici, écrire exactement le corps de la
+fonction.
+
+161
+00:10:08,678 --> 00:10:11,170
+Vous vous préoccupez maintenant
+
+162
+00:10:11,170 --> 00:10:14,578
+du comment, comment faire pour demander un
+nombre
+
+163
+00:10:14,578 --> 00:10:18,278
+compris entre la borne inférieure et la
+borne supérieure.
+
+164
+00:10:18,278 --> 00:10:21,200
+Je vous laisse le faire en guise
+d'exercice.
+
